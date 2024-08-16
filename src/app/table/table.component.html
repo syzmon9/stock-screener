@@ -1,0 +1,11 @@
+<div class="ag-theme-alpine table-container">
+    <ag-grid-angular
+        class="ag-theme-quartz"
+        [rowData]="rowData"
+        [columnDefs]="colDefs"
+        [animateRows]="true"
+        [getRowId]="getRowId"
+        [rowSelection]="'single'"
+        (rowClicked)="onCryptoClick($event)"
+    />
+</div>

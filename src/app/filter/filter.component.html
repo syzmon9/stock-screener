@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Filter Cryptocurrencies</h1>
+<div mat-dialog-content class="dialog-content">
+    <mat-form-field>
+        <mat-label>Min Volume (USDT)</mat-label>
+        <input matInput [(ngModel)]="data.minVolume" type="number">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Max Volume (USDT)</mat-label>
+        <input matInput [(ngModel)]="data.maxVolume" type="number">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Min Price Change (%)</mat-label>
+        <input matInput [(ngModel)]="data.minChange" type="number">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Max Price Change (%)</mat-label>
+        <input matInput [(ngModel)]="data.maxChange" type="number">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Min Price (USDT)</mat-label>
+        <input matInput [(ngModel)]="data.minPrice" type="number">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Max Price (USDT)</mat-label>
+        <input matInput [(ngModel)]="data.maxPrice" type="number">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data">Apply</button>
+</div>
